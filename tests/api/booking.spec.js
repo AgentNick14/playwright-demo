@@ -1,15 +1,15 @@
 import { test, expect } from './fixtures';
 
 const bookingPayload = {
-  firstname: "John",
-  lastname: "Doe",
+  firstname: "Nicholas",
+  lastname: "Naicker",
   totalprice: 200,
   depositpaid: true,
   bookingdates: {
     checkin: "2024-01-01",
     checkout: "2024-01-05"
   },
-  additionalneeds: "Breakfast"
+  additionalneeds: "Automation"
 };
 
 test.describe('Booking API CRUD Operations', () => {
@@ -43,7 +43,7 @@ test.describe('Booking API CRUD Operations', () => {
   test('Update Booking', async ({ api }) => {
     const updatedPayload = {
       ...bookingPayload,
-      firstname: "Jane",
+      firstname: "Nick",
       totalprice: 300
     };
 
@@ -54,7 +54,7 @@ test.describe('Booking API CRUD Operations', () => {
 
     expect(updateRes.ok()).toBeTruthy();
 
-    expect(body.firstname).toBe("Jane");
+    expect(body.firstname).toBe("Nick");
     expect(body.totalprice).toBe(300);
   });
 
