@@ -110,30 +110,9 @@ npx playwright show-report
 
 ---
 
-## Continuous Integration (Optional)
+## Continuous Integration (Attempted/Used a lot of AI)
 
 A **GitHub Actions workflow** can run tests automatically on every push:
-
-```yaml
-name: Playwright Tests
-on: [push, pull_request]
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 20
-      - run: npm ci
-      - run: npx playwright install --with-deps
-      - run: npx playwright test --reporter=html
-      - uses: actions/upload-artifact@v3
-        with:
-          name: playwright-report
-          path: playwright-report/
-```
-
 ---
 
 **Author:** Nicholas Naicker
