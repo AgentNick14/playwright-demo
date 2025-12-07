@@ -1,3 +1,8 @@
+// This file was an attempt to deal with the problem_user and error_user but was unsuccessful in trying to pass those tests
+// Can uncomment and try to run, not sure what I am missing in this approach. 
+// Advice would be appreciated, thank you
+
+
 // const { test, expect } = require('../../fixtures/fixture');
 // const LoginPage = require('../../pages/loginPage');
 // const InventoryPage = require('../../pages/inventoryPage');
