@@ -1,0 +1,125 @@
+<testsuites id="" name="" tests="6" failures="2" skipped="0" errors="0" time="57.190856999999994">
+<testsuite name="ui\workflow.spec.js" timestamp="2025-12-07T07:38:25.217Z" hostname="" tests="6" failures="2" skipped="0" time="52.197" errors="0">
+<testcase name="Full workflow - standard_user" classname="ui\workflow.spec.js" time="2.516">
+</testcase>
+<testcase name="Full workflow - locked_out_user" classname="ui\workflow.spec.js" time="1.782">
+</testcase>
+<testcase name="Full workflow - problem_user" classname="ui\workflow.spec.js" time="31.237">
+<failure message="workflow.spec.js:11:3 Full workflow - problem_user" type="FAILURE">
+<![CDATA[  ui\workflow.spec.js:11:3 › Full workflow - problem_user ──────────────────────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('#finish')
+
+
+       at ..\pages\checkoutPage.js:25
+
+      23 |   // method to confirm checkout
+      24 |   async finishCheckout() {
+    > 25 |     await this.page.click(this.finishButton);
+         |                     ^
+      26 |     await expect(this.page.locator(this.completeText))
+      27 |       .toHaveText('Thank you for your order!');
+      28 |   }
+        at CheckoutPage.finishCheckout (C:\Projects\playwright-demo\pages\checkoutPage.js:25:21)
+        at C:\Projects\playwright-demo\tests\ui\workflow.spec.js:39:20
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\ui-workflow-Full-workflow---problem-user\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\ui-workflow-Full-workflow---problem-user\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\ui-workflow-Full-workflow---problem-user\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\ui-workflow-Full-workflow---problem-user\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\ui-workflow-Full-workflow---problem-user\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\ui-workflow-Full-workflow---problem-user\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\ui-workflow-Full-workflow---problem-user\video.webm]]
+
+[[ATTACHMENT|..\test-results\ui-workflow-Full-workflow---problem-user\error-context.md]]
+
+[[ATTACHMENT|..\test-results\ui-workflow-Full-workflow---problem-user\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Full workflow - performance_glitch_user" classname="ui\workflow.spec.js" time="7.234">
+</testcase>
+<testcase name="Full workflow - error_user" classname="ui\workflow.spec.js" time="7.252">
+<failure message="workflow.spec.js:11:3 Full workflow - error_user" type="FAILURE">
+<![CDATA[  ui\workflow.spec.js:11:3 › Full workflow - error_user ────────────────────────────────────────────
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: locator('.complete-header')
+    Expected: "Thank you for your order!"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" with timeout 5000ms
+      - waiting for locator('.complete-header')
+
+
+       at ..\pages\checkoutPage.js:27
+
+      25 |     await this.page.click(this.finishButton);
+      26 |     await expect(this.page.locator(this.completeText))
+    > 27 |       .toHaveText('Thank you for your order!');
+         |        ^
+      28 |   }
+      29 | }
+      30 |
+        at CheckoutPage.finishCheckout (C:\Projects\playwright-demo\pages\checkoutPage.js:27:8)
+        at C:\Projects\playwright-demo\tests\ui\workflow.spec.js:39:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\ui-workflow-Full-workflow---error-user\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\ui-workflow-Full-workflow---error-user\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\ui-workflow-Full-workflow---error-user\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\ui-workflow-Full-workflow---error-user\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\ui-workflow-Full-workflow---error-user\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\ui-workflow-Full-workflow---error-user\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\ui-workflow-Full-workflow---error-user\video.webm]]
+
+[[ATTACHMENT|..\test-results\ui-workflow-Full-workflow---error-user\error-context.md]]
+
+[[ATTACHMENT|..\test-results\ui-workflow-Full-workflow---error-user\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Full workflow - visual_user" classname="ui\workflow.spec.js" time="2.176">
+</testcase>
+</testsuite>
+</testsuites>
